@@ -1,0 +1,11 @@
+ALTERNATIVE OF NOTEPAD++ IN LINUX (NOTEPAD NEXT)
+
+install flatpak - sudo apt install flatpak -y
+
+goto this site ('https://flathub.org/apps/details/com.github.dail8859.NotepadNext') download file
+
+Then type this command - flatpak install com.github.dail8859.NotepadNext.flatpakref or ("Filename") that you have downloaded
+
+say yes to every file
+
+to run file - flatpak run com.github.dail8859.NotepadNext

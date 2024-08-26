@@ -1,0 +1,3 @@
+if any dependency error happens
+
+type command= 'sudo apt install "file name"'

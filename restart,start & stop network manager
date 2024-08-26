@@ -1,0 +1,17 @@
+sudo service networking restart/reload/force-reload
+sudo service networking start
+sudo service networking stop
+
+
+sudo service NetworkManager restart
+sudo service NetworkManager start
+sudo service NetworkManager stop
+
+
+sudo systemctl restart NetworkManager
+sudo systemctl start NetworkManager
+sudo systemctl stop NetworkManager
+
+
+sudo systemctl disable NetworkManager
+sudo systemctl enable NetworkManager

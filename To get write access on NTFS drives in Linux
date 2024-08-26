@@ -1,0 +1,9 @@
+goto disk utility unmount drives
+
+then type 2nd command in terminal
+
+and mount drives again DONE!
+
+Commands to use :
+Gnome Disk Utility - sudo apt-get install gnome-disk-utility
+NTFSFIX - sudo ntfsfix DRIVE_PATH_HERE example-(/dev/sda)

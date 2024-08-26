@@ -1,0 +1,15 @@
+upower -e
+
+upower -d
+
+upower -i "location"
+
+systemctl status power-profile-daemon
+
+systemctl start power-profile-daemon
+
+systemctl stop power-profile-daemon
+
+powerprofilesctl set performance
+
+powerprofilesctl set powersaver

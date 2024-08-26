@@ -1,0 +1,5 @@
+What I did to solve this problem is:
+* sudo apt-get dist-upgrade -y
+* reboot after complete the upgrade
+* sudo apt-get install linux-headers-$(uname -r)
+* sudo apt-get upgrade linux-headers-$(uname -r)

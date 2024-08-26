@@ -1,0 +1,40 @@
+01.Goto directory
+sudo nano /etc/environment
+
+02.Add inputs at the end of the line and separate directories with colon:
+:/usr/lib/jvm/jdk[version]/bin:/usr/lib/jvm/jdk[version]/db/bin:/usr/lib/jvm/jdk[version]/jre/bin
+
+
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk[version]/bin/java" 0
+sudo update-alternatives --install "/usr/bin/java" "javac" "/usr/lib/jvm/jdk[version]/bin/javac" 0
+sudo update-alternatives --set java /usr/lib/jvm/jdk/[version]/bin/java
+sudo update-alternatives --set java /usr/lib/jvm/jdk[version]/bin/javac
+
+To uninstall JAVA
+
+sudo update-alternatives --remove "java" "/usr/lib/jvm/jdk[version]/bin/java"
+sudo update-alternatives --remove "javac" "/usr/lib/jvm/jdk[version]/bin/javac"
+sudo update-alternatives --remove "javaws" "/usr/lib/jvm/jdk[version]/jre/bin/javaws"
+
+03.Remove The Package
+
+sudo rm -r /usr/lib/jvm/jdk[version]
+
+04.Uninstall Openjdk
+
+sudo apt-get remove openjdk*
+
+05.Dependencies Remove
+
+sudo apt-get remove --auto-remove openjdk*
+
+06.Remove Openjdk Files And It's Configuration Files
+
+sudo apt-get purge openjdk*
+
+07.Remove Openjdk Along With Dependencies And It's Configuration Files
+
+sudo apt-get purge --auto-remove openjdk*
+
+
+sudo update-alternatives --config java

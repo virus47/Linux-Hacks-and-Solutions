@@ -1,0 +1,45 @@
+How to Find Process ID or Process Name
+
+Command:
+ps [options], ps -a
+
+The most common options to add to ps are:
+
+    -a. View processes of all users rather than just the current user.
+    -u. Provide detailed information about each of the processes.
+    -x. Include processes that are controlled not by users but by daemons.
+ 
+How to Kill a Process
+
+Command:
+killall [process], killall -i "process"
+
+The killall command accepts several options:
+
+    -e. Find an exact match for the process name.
+    -I. Ignore the case when trying to find the process name.
+    -i. Ask for additional confirmation when killing the process.
+    -u. Only kill processes owned by a specific user.
+    -v. Report back on whether the process has been successfully killed.
+
+Command:
+pkill [options] [pattern]
+
+pkill options include:
+
+    -n. Only kill the newest of the processes that are discovered.
+    -o. Only kill the oldest of the processes that are discovered.
+    -u. Only kill the processes owned by the specified user.
+    -x. Only kill the processes that match the pattern exactly.
+    -signal. Send a specific signal to the process, rather than SIGTERM.
+
+
+Command:
+kill [process ID]
+
+The kill command kills a single process at a time with the given process ID. It sends a SIGTERM signal instructing a process to stop. It waits for the program to run its shutdown routine.
+
+Command:
+kill -9 [processID]
+
+The kill -9 command sends a SIGKILL signal to a service, shutting it down immediately. An unresponsive program ignores a kill command, but it shuts down whenever a kill -9 command is issued. Use this command with caution since it bypasses the standard shutdown routine, and any unsaved data will be lost.

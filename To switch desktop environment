@@ -1,0 +1,3 @@
+sudo update-alternatives --config x-session-manager
+
+sudo dpkg-reconfigure gdm3

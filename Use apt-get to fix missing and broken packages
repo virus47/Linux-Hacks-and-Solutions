@@ -1,0 +1,22 @@
+Use the “fix-missing” option with “apt-get update” to run the updates and ensure the packages are up to date and there is no new version available for the packages. If want to install dependencies or faced any issue during download
+"apt --fix-broken install"
+
+if some files are missing during downloading or installation
+"apt --fix-missing install"
+
+
+Execute the below command to remove all the unnecessary packages that are no longer needed
+"sudo apt autoremove"
+
+
+Once you are done with the update, execute the below command in order to force the package manager to find any missing dependencies or broken packages and install them.
+"$ sudo apt-get install -f"
+
+execute the below command to clean out the local repository
+"$ sudo apt-get clean"
+
+executing the below command in Terminal to force remove the broken package
+"$ sudo dpkg --remove -force --force-remove-reinstreq Package_Name"
+
+Execute the below command in the Terminal to reconfigure all the partially installed packages
+"$ sudo dpkg --configure -a"

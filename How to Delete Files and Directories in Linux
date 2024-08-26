@@ -1,0 +1,107 @@
+1. Remove file by using “unlink”:
+
+Not so well-liked. We may use the unlink command to permanently delete a single file.
+
+$ unlink {file-name}
+
+
+
+2. Delete a single file:
+
+The rm command, which facilitates deleting one or more files simultaneously, is a more widely used command for removing files.
+
+$ rm {file-name}
+
+If the file is write-protected, rm will ask you to validate its deletion; otherwise, it will delete it without prompting. Using the “-i” flag to force rm to prompt for confirmation before removing a file:
+
+$ rm -i {file-name}
+
+The rm command deletes files without showing any messages. Using the rm command with the -v flag to see what the rm command is currently doing.
+
+$ rm -v {file-name}
+
+Using the -f flag to remove write-protected files without asking for clarification.
+
+$ rm -f {file-name}
+
+
+
+3. Multiple files can be deleted:
+
+Bypassing multiple filenames as arguments to rm, you can delete multiple files.
+
+$ rm {file-name-1} {file-name-2} {file-name-3} ... {file-name-N}
+
+Regular expressions are also supported by rm. If you want to delete all files with the name file-name-*, type:
+
+$ rm file-name*.ext
+
+Regular expressions may also be used to define different directories. We can use something like to delete three files that fit file-name-1, file-name-2, and file-name-3.
+
+$ rm file-name-[123]
+
+
+
+4. Delete the archive:
+
+The rm command with the -d flag can be used to remove an empty directory.
+
+$ rm -d {dir-name}
+
+Supported options for file deletion can also be combined with deleting the directory with the -d flag.
+
+$ rm -idv {dir-name}
+
+Using the -r flag to delete a non-empty directory.
+
+$ rm -r {dir-name}
+
+If you do not want a prompt before deleting the directory and its contents, use the -rf flag. This will remove everything from inside the directory, including the directory itself, without any confirmation. Use caution especially when using as a root.
+
+$ rm -rf {dir-name}
+
+
+
+5. Locate and delete files:
+
+We can use the locate command with various choices for more complicated specifications. To delete all files in a path specified by {dir-to-search} that follow a pattern {pattern}.
+
+    $ find {dir-to-search} -type f -name {pattern} -exec rm -f {} \;
+
+Example:
+
+$ find luv -type f -name "*.txt" -exec rm -f {} \;
+
+
+We may slightly change the above command to delete everything that fits the sequence {pattern}, including directories within {dir-to-search}:
+
+$ find {dir-to-search} -name {pattern} -exec rm -rf {} \;
+
+Internally, modern implementations of the find command support the delete feature. The -delete flag is used to override the rm instruction, while the –depth flag tells find to process the contents of the directory before the directory itself:
+
+    $ find {dir-to-search} -type f -name {file-name-pattern} -depth -delete
+
+
+
+
+6. Empty files should be found and deleted:
+
+You may use the following command to remove all empty directories within a given path dir-to-search:
+
+$ find {dir-to-search} -type d -empty -delete
+
+Instead, use the following command to remove all empty files within a given path dir-to-search:
+
+$ find {dir-to-search} -type f -empty -delete
+
+
+
+7. Permissions are used to locate and delete files:
+
+We can now remove files based on special permissions, such as:
+
+    $ find {dir-to-search} -name {pattern} -perm {NNN} -delete
+
+Consider the following scenario:
+
+$ find /var/tmp -name "temp*" -perm 755 -delete

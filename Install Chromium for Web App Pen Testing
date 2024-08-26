@@ -1,0 +1,22 @@
+Chromium exists within the Kali repositories and can be installed using:
+apt-get install chromium
+
+
+
+Chromium Won’t Launch on Kali
+By default chromium won’t launch on Kali Linux, this is due to chromium running as the root user. You can fix this by opening /etc/chromium.d/default-flags in mousepad and adding the following lines:
+
+# Run as root Kali
+export CHROMIUM_FLAGS="$CHROMIUM_FLAGS --password-store=detect --no-sandbox --user-data-dir"
+
+
+
+In order to use chromium for Web Application Penetration Testing you need to disable all the security features, allowing for DOM based XSS testing in chromium.
+
+# Disable Chromium security features for web app testing
+export CHROMIUM_FLAGS="$CHROMIUM_FLAGS --disable-web-security"
+
+
+
+Kali Chromium Error: You Are using an Unsupported Command line flag –disable-web-security. Security and Stability will suffer
+Ignore the following error, Chromium still process DOM based XSS. The same error occurs in Google Chrome.

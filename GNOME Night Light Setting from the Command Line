@@ -1,0 +1,19 @@
+To turn on: gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+
+To turn off: gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled false
+
+To schedule on time, here I want to schedule night light from 23:06 hrs (that is 06/60=0.1): 
+gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-from 23.1
+
+To schedule off time, I want to schedule night light off at 23:25 hrs (that is 25/60=0.416666666):
+gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-to 23.416666666
+
+You can also set the night light temperature which will increase and decrease the brightness, 4000 is the default value for Ubuntu 18.04, you can try different values for example 2000, 3000, 5000, 6000, 10000 and set the preferred ones: gsettings set org.gnome.settings-daemon.plugins.color night-light-temperature 4000
+
+
+
+To get the current values for above commands, run the below commands
+gsettings get org.gnome.settings-daemon.plugins.color night-light-enabled 
+gsettings get org.gnome.settings-daemon.plugins.color night-light-schedule-from
+gsettings get org.gnome.settings-daemon.plugins.color night-light-schedule-to
+gsettings get org.gnome.settings-daemon.plugins.color night-light-temperature

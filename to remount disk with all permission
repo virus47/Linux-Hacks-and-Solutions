@@ -1,0 +1,1 @@
+sudo mount -o remount,uid=1000,gid=46,rw /dev/sdc1

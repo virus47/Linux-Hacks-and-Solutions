@@ -1,0 +1,10 @@
+type command
+
+ifconfig "eth0 or wlan0" down
+ifconfig "eth0 or wlan0" hw ether 00:11:22:33:44:55
+ifconfig "eth0 or wlan0" up
+
+Remember custom mac id is always saved in the memory it's not permenant, if you restart system it's goes back to default.
+And if doesn't then problem has occured.
+
+macchanger --help

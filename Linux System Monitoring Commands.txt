@@ -1,0 +1,41 @@
+DF Command
+
+df command
+
+Show information about the file system
+
+df -h
+
+-h Human Readable
+-BM or -BG scale sizes by size
+
+----------------------------------------------------------------------------------------
+
+DU Command
+
+du command
+
+Summarize disk usage of the set of FILEs, recursively for directories.
+
+du -h
+du -h FILE/PATH
+du -hc FILE/PATH for total volume
+
+If you want to see even size of file then use a 
+
+du -ahc FILE/PATH for total volume
+-BM or -BG scale sizes by size
+
+
+-----------------------------------------------------------------------------------
+
+Linux Free Command
+
+free command
+
+Display amount of free and used memory in the system
+
+free
+free -h
+free -s N (Keep refreshing memory after N sec)
+free -c N (Exit after repeating N times)

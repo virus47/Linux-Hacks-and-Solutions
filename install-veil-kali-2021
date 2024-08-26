@@ -1,0 +1,3 @@
+apt update
+apt install -y veil
+/usr/share/veil/config/setup.sh --force --silent

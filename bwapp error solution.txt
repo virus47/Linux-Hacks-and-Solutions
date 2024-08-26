@@ -1,0 +1,2 @@
+add a line of " mysqli_report(MYSQLI_REPORT_OFF); " after ' $message - "Click <a href=\ ' - search for
+in install.php file

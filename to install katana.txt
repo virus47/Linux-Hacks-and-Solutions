@@ -1,0 +1,11 @@
+## to install katana
+
+go install github.com/projectdiscovery/katana/cmd/katana@latest
+
+## to able access katana anywhere from terminal
+
+sudo cp ~/go/bin/katana /bin/
+
+## to use katana
+
+katana -h or katana --version

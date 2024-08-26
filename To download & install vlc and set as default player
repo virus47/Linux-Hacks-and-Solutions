@@ -1,0 +1,9 @@
+install vlc by using command - sudo apt install vlc -y
+
+then use VLC_as_Root-master.zip readme file to how to set vlc as root and
+
+once vlc is set as root then goto settings/default applications/videos/'select' vlc.
+
+DONE!
+
+"sudo sed -i 's/geteuid/getppid/' /usr/bin/vlc"

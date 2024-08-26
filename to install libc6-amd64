@@ -1,0 +1,3 @@
+to install libc6:amd64
+
+type command= 'sudo apt install libc6:amd64'
