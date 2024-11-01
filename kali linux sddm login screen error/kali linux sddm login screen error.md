@@ -2,7 +2,7 @@
 
 # "make sure when you get this error your linux was alredy connected to internet" 
 
-if you got this error do the following steps to resolve it.
+if you got this error (attached a screenshot in directory) do the following steps to resolve it.
 
 1. press ctrl + alt + f1 and then ctrl + alt + f6 to switch to terminal
 
